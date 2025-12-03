@@ -1,0 +1,23 @@
+body { font-family: Arial, sans-serif; margin:0; background:#f5f7fb; color:#111 }
+.center { height:100vh; display:flex; align-items:center; justify-content:center }
+.card { background:white; padding:16px; border-radius:8px; box-shadow:0 4px 14px rgba(0,0,0,0.06); width:100%; max-width:460px }
+input, textarea { width:100%; padding:8px; margin:8px 0; border-radius:6px; border:1px solid #ddd; font-size:14px }
+textarea { min-height:80px; resize:vertical }
+button { padding:8px 12px; border-radius:6px; border:0; cursor:pointer; background:#2563eb; color:white }
+button.muted { background:#e5e7eb; color:#111 }
+.link { background:transparent; color:#2563eb; border:1px solid #2563eb; padding:6px 10px; border-radius:6px; margin-left:8px }
+.topbar { display:flex; align-items:center; justify-content:space-between; padding:12px 20px; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.03) }
+.muted { color:#6b7280 }
+.container { max-width:900px; margin:20px auto; padding:0 16px; display:grid; grid-template-columns: 1fr 1fr; gap:20px }
+.tasks { grid-column: 2 / 3 }
+.form { grid-column: 1 / 2 }
+ul { list-style:none; padding:0; margin:0 }
+.task { display:flex; justify-content:space-between; gap:12px; padding:12px; background:white; border-radius:8px; margin-bottom:10px; align-items:center }
+.task.done { opacity:0.6; text-decoration:line-through }
+.controls button { margin-left:8px }
+.controls .danger { background:#ef4444 }
+@media (max-width:800px){
+  .container { grid-template-columns: 1fr; }
+  .tasks { grid-column: 1 / -1 }
+  .form { grid-column: 1 / -1 }
+}
